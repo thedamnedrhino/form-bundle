@@ -11,42 +11,26 @@
 
 namespace Genemu\Bundle\FormBundle\Form\JQuery\Type;
 
-use Genemu\Bundle\FormBundle\Form\JQuery\DataTransformer\ArrayToStringTransformer;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\FormView;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\OptionsResolver\Options;
 
 /**
- * Select2Type to JQueryLib
+ * Select2ModelType to JQueryLib
  *
  * @author Bilal Amarni <bilal.amarni@gmail.com>
  * @author Chris Tickner <chris.tickner@gmail.com>
+ * @author Benjamin Schumacher <benschumi@hotmail.fr>
  */
-class Select2Type extends AbstractType
+class Select2ModelType extends AbstractType
 {
-    private $widget;
-
     private $configs;
 
-    public function __construct($widget, array $configs = array())
+    public function __construct(array $configs = array())
     {
-        $this->widget = $widget;
         $this->configs = $configs;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function buildForm(FormBuilderInterface $builder, array $options)
-    {
-        if ('hidden' === $this->widget && !empty($options['configs']['multiple'])) {
-            $builder->addViewTransformer(new ArrayToStringTransformer());
-        } elseif ('hidden' === $this->widget && empty($options['configs']['multiple']) && null !== $options['transformer']) {
-            $builder->addModelTransformer($options['transformer']);
-        }
     }
 
     /**
@@ -90,10 +74,7 @@ class Select2Type extends AbstractType
      */
     public function getParent()
     {
-        if (class_exists('Symfony\Component\Form\Extension\Core\Type\\' . ucfirst($this->widget) . 'Type')) {
-            return 'Symfony\Component\Form\Extension\Core\Type\\' . ucfirst($this->widget) . 'Type';
-        }
-        return 'Symfony\Bridge\Doctrine\Form\Type\\' . ucfirst($this->widget) . 'Type';
+        return 'Symfony\Component\Form\Extension\Core\Type\ModelType';
     }
 
     /**
@@ -101,7 +82,7 @@ class Select2Type extends AbstractType
      */
     public function getName()
     {
-        return 'genemu_jqueryselect2_' . $this->widget;
+        return 'genemu_jqueryselect2_model';
     }
 
     /**
@@ -109,6 +90,6 @@ class Select2Type extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'genemu_jqueryselect2_' . $this->widget;
+        return 'genemu_jqueryselect2_model';
     }
 }
