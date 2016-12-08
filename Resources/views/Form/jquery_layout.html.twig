@@ -658,7 +658,7 @@
         $field = $('#{{ id }}');
 
         {% if configs.placeholder is defined %}
-            {% set configs.placeholder = configs.placeholder|trans %}
+            {% set configs = configs|merge({"placeholder": configs.placeholder|trans}) %}
         {% endif %}
 
         {% block genemu_jqueryselect2_javascript_prototype %}
