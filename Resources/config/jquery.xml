@@ -23,16 +23,46 @@
         <service id="genemu.form.jquery.type.autocompleter" class="Genemu\Bundle\FormBundle\Form\JQuery\Type\AutocompleterType" abstract="true" />
         <service id="genemu.form.jquery.type.autocomplete" class="Genemu\Bundle\FormBundle\Form\JQuery\Type\AutocompleteType" abstract="true" />
         <service id="genemu.form.jquery.type.chosen" class="Genemu\Bundle\FormBundle\Form\JQuery\Type\ChosenType" abstract="true" />
-        <service id="genemu.form.jquery.type.select2choice" class="Genemu\Bundle\FormBundle\Form\JQuery\Type\Select2ChoiceType" abstract="true" />
-        <service id="genemu.form.jquery.type.select2country" class="Genemu\Bundle\FormBundle\Form\JQuery\Type\Select2CountryType" abstract="true" />
-        <service id="genemu.form.jquery.type.select2currency" class="Genemu\Bundle\FormBundle\Form\JQuery\Type\Select2CurrencyType" abstract="true" />
-        <service id="genemu.form.jquery.type.select2entity" class="Genemu\Bundle\FormBundle\Form\JQuery\Type\Select2EntityType" abstract="true" />
-        <service id="genemu.form.jquery.type.select2entity" class="Genemu\Bundle\FormBundle\Form\JQuery\Type\Select2EntityType" abstract="true" />     
-        <service id="genemu.form.jquery.type.select2hidden" class="Genemu\Bundle\FormBundle\Form\JQuery\Type\Select2HiddenType" abstract="true" />
-        <service id="genemu.form.jquery.type.select2language" class="Genemu\Bundle\FormBundle\Form\JQuery\Type\Select2LanguageType" abstract="true" />
-        <service id="genemu.form.jquery.type.select2locale" class="Genemu\Bundle\FormBundle\Form\JQuery\Type\Select2LocaleType" abstract="true" />
-        <service id="genemu.form.jquery.type.select2model" class="Genemu\Bundle\FormBundle\Form\JQuery\Type\Select2ModelType" abstract="true" />
-        <service id="genemu.form.jquery.type.select2timezone" class="Genemu\Bundle\FormBundle\Form\JQuery\Type\Select2TimeZoneType" abstract="true" />
+        <service id="genemu.form.jquery.type.select2choice" class="Genemu\Bundle\FormBundle\Form\JQuery\Type\Select2ChoiceType">
+            <argument>%genemu.form.select2.configs%</argument>
+            <tag name="form.type" />
+        </service>
+        <service id="genemu.form.jquery.type.select2country" class="Genemu\Bundle\FormBundle\Form\JQuery\Type\Select2CountryType">
+            <argument>%genemu.form.select2.configs%</argument>
+            <tag name="form.type" />
+        </service>
+        <service id="genemu.form.jquery.type.select2currency" class="Genemu\Bundle\FormBundle\Form\JQuery\Type\Select2CurrencyType">
+            <argument>%genemu.form.select2.configs%</argument>
+            <tag name="form.type" />
+        </service>
+        <service id="genemu.form.jquery.type.select2entity" class="Genemu\Bundle\FormBundle\Form\JQuery\Type\Select2EntityType">
+            <argument>%genemu.form.select2.configs%</argument>
+            <tag name="form.type" />
+        </service>
+        <service id="genemu.form.jquery.type.select2entity" class="Genemu\Bundle\FormBundle\Form\JQuery\Type\Select2EntityType">
+            <argument>%genemu.form.select2.configs%</argument>
+            <tag name="form.type" />
+        </service>  
+        <service id="genemu.form.jquery.type.select2hidden" class="Genemu\Bundle\FormBundle\Form\JQuery\Type\Select2HiddenType">
+            <argument>%genemu.form.select2.configs%</argument>
+            <tag name="form.type" />
+        </service>
+        <service id="genemu.form.jquery.type.select2language" class="Genemu\Bundle\FormBundle\Form\JQuery\Type\Select2LanguageType">
+            <argument>%genemu.form.select2.configs%</argument>
+            <tag name="form.type" />
+        </service>
+        <service id="genemu.form.jquery.type.select2locale" class="Genemu\Bundle\FormBundle\Form\JQuery\Type\Select2LocaleType">
+            <argument>%genemu.form.select2.configs%</argument>
+            <tag name="form.type" />
+        </service>
+        <service id="genemu.form.jquery.type.select2model" class="Genemu\Bundle\FormBundle\Form\JQuery\Type\Select2ModelType">
+            <argument>%genemu.form.select2.configs%</argument>
+            <tag name="form.type" />
+        </service>
+        <service id="genemu.form.jquery.type.select2timezone" class="Genemu\Bundle\FormBundle\Form\JQuery\Type\Select2TimeZoneType">
+            <argument>%genemu.form.select2.configs%</argument>
+            <tag name="form.type" />
+        </service>
 
         <service id="genemu.form.jquery.type.color" class="Genemu\Bundle\FormBundle\Form\JQuery\Type\ColorType">
             <tag name="form.type" alias="genemu_jquerycolor" />
