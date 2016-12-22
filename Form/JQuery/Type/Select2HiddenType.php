@@ -96,6 +96,6 @@ class Select2HiddenType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'genemu_jqueryselect2_hidden';
+        return 'genemu_jqueryselect2';
     }
 }

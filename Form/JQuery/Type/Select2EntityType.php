@@ -83,6 +83,6 @@ class Select2EntityType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'genemu_jqueryselect2_entity';
+        return 'genemu_jqueryselect2';
     }
 }

@@ -82,6 +82,6 @@ class Select2CountryType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'genemu_jqueryselect2_country';
+        return 'genemu_jqueryselect2';
     }
 }

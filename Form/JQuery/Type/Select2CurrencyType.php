@@ -82,6 +82,6 @@ class Select2CurrencyType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'genemu_jqueryselect2_currency';
+        return 'genemu_jqueryselect2';
     }
 }

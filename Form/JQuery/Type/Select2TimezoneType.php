@@ -82,6 +82,6 @@ class Select2TimezoneType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'genemu_jqueryselect2_timezone';
+        return 'genemu_jqueryselect2';
     }
 }
