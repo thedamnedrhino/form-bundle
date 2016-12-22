@@ -81,7 +81,7 @@ class RatingType extends AbstractType
     /**
      * {@inheritdoc}
      */
-    public function getName()
+    public function getBlockPrefix()
     {
         return 'genemu_jqueryrating';
     }

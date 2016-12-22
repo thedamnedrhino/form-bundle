@@ -80,14 +80,6 @@ class Select2LanguageType extends AbstractType
     /**
      * {@inheritdoc}
      */
-    public function getName()
-    {
-        return 'genemu_jqueryselect2_language';
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function getBlockPrefix()
     {
         return 'genemu_jqueryselect2_language';

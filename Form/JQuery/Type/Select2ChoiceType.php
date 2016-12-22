@@ -80,14 +80,6 @@ class Select2ChoiceType extends AbstractType
     /**
      * {@inheritdoc}
      */
-    public function getName()
-    {
-        return 'genemu_jqueryselect2_choice';
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function getBlockPrefix()
     {
         return 'genemu_jqueryselect2_choice';

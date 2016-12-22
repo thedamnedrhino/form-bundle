@@ -80,7 +80,7 @@ class ChosenType extends AbstractType
     /**
      * {@inheritdoc}
      */
-    public function getName()
+    public function getBlockPrefix()
     {
         return 'genemu_jquerychosen_' . $this->widget;
     }
